@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+	<!-- 开启注解扫描 
+		(1)到包里面扫描类、方法、属性上面是否有注解
+		（2）如果有多个文件需要扫描，可以在base-package里面写最顶层的包名
+	-->
+	<context:component-scan base-package="com.zcy.anno"></context:component-scan>
+	<!-- 
+		只扫描属性上面的注解
+	-->
+	<context:annotation-config></context:annotation-config>
+</beans>
